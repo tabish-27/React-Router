@@ -1,33 +1,29 @@
-//About.jsx
-import React from 'react'
+import React from "react";
+import { Grid, Typography, Box } from "@mui/material";
 
 export default function About() {
   return (
-      <div className="py-16 bg-white">
-          <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-              <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-                  <div className="md:5/12 lg:w-5/12">
-                      <img
-                          src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-                          alt="image"
-                      />
-                  </div>
-                  <div className="md:7/12 lg:w-6/12">
-                      <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
-                          React development is carried out by passionate developers
-                      </h2>
-                      <p className="mt-6 text-gray-600">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
-                          accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
-                          aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
-                      </p>
-                      <p className="mt-4 text-gray-600">
-                          Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-                          Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
+    <Box sx={{ padding: "2rem 0" }}>
+      <Grid container spacing={4} alignItems="center">
+        <Grid item xs={12} md={6}>
+          <img
+            src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+            alt="Startup Illustration"
+            style={{ width: "100%", borderRadius: "8px" }}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h4" fontWeight="bold">
+            React development is carried out by passionate developers
+          </Typography>
+          <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+            React is a powerful JavaScript library for building modern user interfaces. It enables developers to create dynamic, scalable, and high-performance applications efficiently.
+          </Typography>
+          <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+            With a strong community and continuous improvements, React provides a robust ecosystem for front-end development, making it a preferred choice for developers worldwide.
+          </Typography>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
